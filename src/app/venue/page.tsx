@@ -1,6 +1,7 @@
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+import { Check, MapPin } from 'lucide-react'
 
 export const metadata = {
   title: 'Venue | Arizona Women\'s Conference',
@@ -50,9 +51,7 @@ export default function VenuePage() {
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-lg bg-[#E91E8C]/10 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-[#E91E8C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
+                    <Check className="w-6 h-6 text-[#E91E8C]" />
                   </div>
                   <div>
                     <p className="font-bold text-[#1a1a1a]">Free Parking</p>
@@ -62,9 +61,7 @@ export default function VenuePage() {
 
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-lg bg-[#E91E8C]/10 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-[#E91E8C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
+                    <Check className="w-6 h-6 text-[#E91E8C]" />
                   </div>
                   <div>
                     <p className="font-bold text-[#1a1a1a]">Wheelchair Accessible</p>
@@ -74,9 +71,7 @@ export default function VenuePage() {
 
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-lg bg-[#E91E8C]/10 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-[#E91E8C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
+                    <Check className="w-6 h-6 text-[#E91E8C]" />
                   </div>
                   <div>
                     <p className="font-bold text-[#1a1a1a]">Climate Controlled</p>
@@ -90,10 +85,7 @@ export default function VenuePage() {
               {/* Map placeholder */}
               <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center mb-8">
                 <div className="text-center text-gray-500">
-                  <svg className="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
+                  <MapPin className="w-12 h-12 mx-auto mb-2" />
                   <p>Map Available Soon</p>
                 </div>
               </div>

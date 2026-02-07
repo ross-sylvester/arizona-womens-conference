@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+import { ChevronDown } from 'lucide-react'
 
 const faqs = [
   {
@@ -139,14 +140,9 @@ export default function FAQPage() {
                         className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
                       >
                         <span className="font-medium text-[#1a1a1a] pr-4">{item.q}</span>
-                        <svg
+                        <ChevronDown
                           className={`w-5 h-5 text-[#E91E8C] flex-shrink-0 transition-transform ${isOpen ? 'rotate-180' : ''}`}
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
+                        />
                       </button>
                       {isOpen && (
                         <div className="px-6 pb-4">

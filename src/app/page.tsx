@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+import { Sparkles, Users, Rocket, Calendar, Clock, MapPin, Ticket, Check, Quote } from 'lucide-react'
 
 export default function ArizonaWomensConferencePage() {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '' })
@@ -132,27 +133,32 @@ export default function ArizonaWomensConferencePage() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                icon: '✨',
+                icon: Sparkles,
                 title: 'Get Inspired',
                 description: 'Hear from successful women entrepreneurs and industry leaders who have walked the path you\'re on.'
               },
               {
-                icon: '🤝',
+                icon: Users,
                 title: 'Build Connections',
                 description: 'Network with hundreds of ambitious, like-minded women who will become your support system.'
               },
               {
-                icon: '🚀',
+                icon: Rocket,
                 title: 'Take Action',
                 description: 'Leave with actionable strategies and a clear roadmap to achieve your business goals.'
               }
-            ].map((item, i) => (
-              <div key={i} className="text-center p-8">
-                <div className="text-5xl mb-6">{item.icon}</div>
-                <h3 className="text-xl font-bold text-[#1a1a1a] uppercase mb-4">{item.title}</h3>
-                <p className="text-[#666]">{item.description}</p>
-              </div>
-            ))}
+            ].map((item, i) => {
+              const Icon = item.icon
+              return (
+                <div key={i} className="text-center p-8">
+                  <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-[#E91E8C]/10 flex items-center justify-center">
+                    <Icon className="w-8 h-8 text-[#E91E8C]" />
+                  </div>
+                  <h3 className="text-xl font-bold text-[#1a1a1a] uppercase mb-4">{item.title}</h3>
+                  <p className="text-[#666]">{item.description}</p>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -168,21 +174,24 @@ export default function ArizonaWomensConferencePage() {
               </h2>
               <div className="space-y-6">
                 {[
-                  { icon: '📅', label: 'Date', value: 'Saturday, May 2, 2026' },
-                  { icon: '⏰', label: 'Time', value: '9:00 AM - 5:00 PM' },
-                  { icon: '📍', label: 'Location', value: 'Phoenix, AZ' },
-                  { icon: '🎟️', label: 'Tickets', value: 'Starting at $197' }
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-[#E91E8C]/20 flex items-center justify-center text-2xl">
-                      {item.icon}
+                  { icon: Calendar, label: 'Date', value: 'Saturday, May 2, 2026' },
+                  { icon: Clock, label: 'Time', value: '9:00 AM - 5:00 PM' },
+                  { icon: MapPin, label: 'Location', value: 'Phoenix, AZ' },
+                  { icon: Ticket, label: 'Tickets', value: 'Starting at $197' }
+                ].map((item, i) => {
+                  const Icon = item.icon
+                  return (
+                    <div key={i} className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-lg bg-[#E91E8C]/20 flex items-center justify-center">
+                        <Icon className="w-6 h-6 text-[#E91E8C]" />
+                      </div>
+                      <div>
+                        <p className="text-white/60 text-sm">{item.label}</p>
+                        <p className="text-white font-medium">{item.value}</p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="text-white/60 text-sm">{item.label}</p>
-                      <p className="text-white font-medium">{item.value}</p>
-                    </div>
-                  </div>
-                ))}
+                  )
+                })}
               </div>
             </div>
 
@@ -201,9 +210,7 @@ export default function ArizonaWomensConferencePage() {
                   'Lunch and refreshments included'
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <svg className="w-6 h-6 text-[#E91E8C] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
+                    <Check className="w-6 h-6 text-[#E91E8C] flex-shrink-0 mt-0.5" />
                     <span className="text-white/80">{item}</span>
                   </li>
                 ))}
@@ -351,9 +358,7 @@ export default function ArizonaWomensConferencePage() {
               { quote: "I've attended many conferences, but this one stands out. The community of women is supportive and inspiring.", name: "Rachel K.", title: "Startup Founder" }
             ].map((testimonial, i) => (
               <div key={i} className="p-8 rounded-lg bg-[#f9f9f9]">
-                <svg className="w-10 h-10 text-[#E91E8C] mb-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-                </svg>
+                <Quote className="w-10 h-10 text-[#E91E8C] mb-4" />
                 <p className="text-[#333] italic mb-6 leading-relaxed">{testimonial.quote}</p>
                 <p className="text-[#E91E8C] font-bold">{testimonial.name}</p>
                 <p className="text-[#666] text-sm">{testimonial.title}</p>
@@ -411,27 +416,19 @@ export default function ArizonaWomensConferencePage() {
               <p className="text-white/50 text-sm mb-6">Early Bird Price</p>
               <ul className="text-left space-y-3 mb-8 text-white/70 text-sm">
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-[#E91E8C] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                  <Check className="w-5 h-5 text-[#E91E8C] flex-shrink-0 mt-0.5" />
                   Full day access to all sessions
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-[#E91E8C] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                  <Check className="w-5 h-5 text-[#E91E8C] flex-shrink-0 mt-0.5" />
                   Networking lunch included
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-[#E91E8C] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                  <Check className="w-5 h-5 text-[#E91E8C] flex-shrink-0 mt-0.5" />
                   Conference materials
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-[#E91E8C] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                  <Check className="w-5 h-5 text-[#E91E8C] flex-shrink-0 mt-0.5" />
                   Certificate of attendance
                 </li>
               </ul>
@@ -456,33 +453,23 @@ export default function ArizonaWomensConferencePage() {
               <p className="text-white/50 text-sm mb-6">Limited Availability</p>
               <ul className="text-left space-y-3 mb-8 text-white/70 text-sm">
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-[#E91E8C] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                  <Check className="w-5 h-5 text-[#E91E8C] flex-shrink-0 mt-0.5" />
                   Everything in General Admission
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-[#E91E8C] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                  <Check className="w-5 h-5 text-[#E91E8C] flex-shrink-0 mt-0.5" />
                   VIP seating (front rows)
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-[#E91E8C] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                  <Check className="w-5 h-5 text-[#E91E8C] flex-shrink-0 mt-0.5" />
                   Exclusive VIP networking reception
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-[#E91E8C] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                  <Check className="w-5 h-5 text-[#E91E8C] flex-shrink-0 mt-0.5" />
                   Meet & greet with speakers
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-[#E91E8C] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                  <Check className="w-5 h-5 text-[#E91E8C] flex-shrink-0 mt-0.5" />
                   VIP gift bag + Recording access
                 </li>
               </ul>

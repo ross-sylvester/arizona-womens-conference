@@ -1,6 +1,7 @@
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+import { Sparkles, Users, Rocket, Check } from 'lucide-react'
 
 export const metadata = {
   title: 'About | Arizona Women\'s Conference',
@@ -72,25 +73,30 @@ export default function AboutPage() {
               {
                 title: 'Empowerment',
                 description: 'We believe in giving women the tools, knowledge, and confidence to take bold action in their businesses and lives.',
-                icon: '✨'
+                icon: Sparkles
               },
               {
                 title: 'Connection',
                 description: 'Real relationships are built here. We foster an environment where meaningful connections happen naturally.',
-                icon: '🤝'
+                icon: Users
               },
               {
                 title: 'Transformation',
                 description: 'We don\'t just inspire—we equip you with actionable strategies that create real, lasting change.',
-                icon: '🚀'
+                icon: Rocket
               }
-            ].map((value, i) => (
-              <div key={i} className="text-center p-8 rounded-lg" style={{ backgroundColor: 'rgba(255,255,255,0.05)' }}>
-                <div className="text-4xl mb-4">{value.icon}</div>
-                <h3 className="text-xl font-bold text-white uppercase mb-4">{value.title}</h3>
-                <p className="text-white/70">{value.description}</p>
-              </div>
-            ))}
+            ].map((value, i) => {
+              const Icon = value.icon
+              return (
+                <div key={i} className="text-center p-8 rounded-lg" style={{ backgroundColor: 'rgba(255,255,255,0.05)' }}>
+                  <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-[#E91E8C]/20 flex items-center justify-center">
+                    <Icon className="w-8 h-8 text-[#E91E8C]" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white uppercase mb-4">{value.title}</h3>
+                  <p className="text-white/70">{value.description}</p>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -112,9 +118,7 @@ export default function AboutPage() {
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4">
                 <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5 text-[#E91E8C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                  </svg>
+                  <Check className="w-5 h-5 text-[#E91E8C]" strokeWidth={3} />
                 </div>
                 <p className="text-white text-lg">{item}</p>
               </div>
