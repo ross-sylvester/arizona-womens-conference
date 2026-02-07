@@ -69,7 +69,7 @@ export default function ArizonaWomensConferencePage() {
 
         <div className="relative max-w-4xl mx-auto py-20">
           <p className="text-sm md:text-base uppercase tracking-widest text-[#E91E8C] mb-4">
-            Saturday, May 2, 2026 • Phoenix, AZ
+            May 2, 2026 • Phoenix, Arizona
           </p>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white uppercase mb-6" style={{ fontFamily: '"Acherus Black", Montserrat, sans-serif' }}>
@@ -77,12 +77,12 @@ export default function ArizonaWomensConferencePage() {
           </h1>
 
           <p className="text-xl md:text-2xl text-[#E91E8C] italic mb-8">
-            Empower. Connect. Transform.
+            Lead. Succeed. Thrive.
           </p>
 
           <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto mb-10">
-            Join hundreds of ambitious women for a full day of inspiration, education, and connection.
-            Leave with the tools, strategies, and network to take your business and life to the next level.
+            Arizona&apos;s premier conference for women in business. Join 500+ ambitious women leaders, entrepreneurs,
+            and professionals for a full day of world-class speakers, actionable workshops, and powerful networking.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -213,39 +213,89 @@ export default function ArizonaWomensConferencePage() {
         </div>
       </section>
 
-      {/* Featured Speaker - PINK BACKGROUND */}
+      {/* Speakers Section */}
       <section className="py-20 px-4" style={{ backgroundColor: '#E91E8C' }}>
-        <div className="max-w-5xl mx-auto">
-          <p className="text-white/80 text-sm uppercase tracking-widest text-center mb-4">Featured Speaker</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white uppercase text-center mb-16" style={{ fontFamily: '"Acherus Black", Montserrat, sans-serif' }}>
-            Learn From the Best
-          </h2>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="text-white/80 text-sm uppercase tracking-widest mb-4">2026 Speaker Lineup</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white uppercase" style={{ fontFamily: '"Acherus Black", Montserrat, sans-serif' }}>
+              World-Class Speakers
+            </h2>
+            <p className="text-white/70 mt-4 max-w-2xl mx-auto">
+              Learn from industry leaders, successful entrepreneurs, and experts who will share actionable insights to accelerate your success.
+            </p>
+          </div>
 
-          <div className="flex flex-col md:flex-row items-center gap-12">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://dtdtnation.com/wp-content/uploads/2022/04/TiffanyL-LA-2018-1450.jpg"
-              alt="Tiffany Largie"
-              className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-white shadow-2xl"
-            />
-            <div className="text-center md:text-left">
-              <h3 className="text-2xl md:text-3xl font-bold text-white uppercase mb-2" style={{ fontFamily: '"Acherus Bold", Montserrat, sans-serif' }}>
-                Tiffany Largie
-              </h3>
-              <p className="text-white/80 mb-4">CEO, DO THE DAMN THING</p>
-              <p className="text-white/90 leading-relaxed max-w-xl mb-6">
-                Tiffany Largie is a serial entrepreneur, international speaker, and the CEO of DO THE DAMN THING.
-                She has built multiple seven-figure businesses and is passionate about helping women entrepreneurs
-                unlock their full potential and create lasting success.
-              </p>
-              <Link
-                href="/speakers"
-                className="inline-block px-6 py-3 bg-white text-[#E91E8C] font-bold text-sm uppercase tracking-wide rounded hover:opacity-90 transition-opacity"
-              >
-                View All Speakers
-              </Link>
+          {/* Speaker Grid */}
+          <div className="grid md:grid-cols-4 gap-8 mb-12">
+            {/* Tiffany - First Announced */}
+            <div className="text-center">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://dtdtnation.com/wp-content/uploads/2022/04/TiffanyL-LA-2018-1450.jpg"
+                alt="Tiffany Largie"
+                className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-white shadow-xl mx-auto mb-4"
+              />
+              <h3 className="text-lg font-bold text-white uppercase">Tiffany Largie</h3>
+              <p className="text-white/70 text-sm">Serial Entrepreneur</p>
+              <p className="text-white/50 text-xs mt-1">Keynote Speaker</p>
+            </div>
+
+            {/* Coming Soon Speakers */}
+            {[1, 2, 3].map((i) => (
+              <div key={i} className="text-center">
+                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-white/20 mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-white/60 text-4xl">?</span>
+                </div>
+                <h3 className="text-lg font-bold text-white/60 uppercase">Coming Soon</h3>
+                <p className="text-white/40 text-sm">Speaker Announcement</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <p className="text-white/70 mb-6">More speakers to be announced. Follow us for updates!</p>
+            <Link
+              href="/speakers"
+              className="inline-block px-6 py-3 bg-white text-[#E91E8C] font-bold text-sm uppercase tracking-wide rounded hover:opacity-90 transition-opacity"
+            >
+              View All Speakers
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Sponsors Section */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-sm uppercase tracking-widest text-[#666] text-center mb-8">Proudly Sponsored By</p>
+          <div className="flex flex-wrap justify-center items-center gap-12">
+            <div className="text-center">
+              <p className="text-xs uppercase tracking-wide text-[#999] mb-3">Title Sponsor</p>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://dtdtnation.com/wp-content/uploads/2022/01/DTDT_logo-1.svg"
+                alt="DO THE DAMN THING"
+                style={{ height: '50px' }}
+              />
+            </div>
+            {/* Placeholder for future sponsors */}
+            <div className="text-center opacity-40">
+              <p className="text-xs uppercase tracking-wide text-[#999] mb-3">Partner</p>
+              <div className="h-12 w-32 bg-gray-200 rounded flex items-center justify-center text-gray-400 text-sm">
+                Your Logo Here
+              </div>
+            </div>
+            <div className="text-center opacity-40">
+              <p className="text-xs uppercase tracking-wide text-[#999] mb-3">Partner</p>
+              <div className="h-12 w-32 bg-gray-200 rounded flex items-center justify-center text-gray-400 text-sm">
+                Your Logo Here
+              </div>
             </div>
           </div>
+          <p className="text-center text-sm text-[#999] mt-8">
+            Interested in sponsoring? <a href="mailto:hello@azwomensconference.com" className="text-[#E91E8C] hover:underline">Contact us</a>
+          </p>
         </div>
       </section>
 

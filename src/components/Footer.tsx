@@ -8,17 +8,28 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://dtdtnation.com/wp-content/uploads/2022/01/DTDT_logo-1.svg"
-              alt="DO THE DAMN THING"
-              style={{ height: '40px' }}
-              className="mb-6"
-            />
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 rounded-full bg-[#E91E8C] flex items-center justify-center">
+                <span className="text-white font-bold text-xl">AZ</span>
+              </div>
+              <div>
+                <p className="text-white font-bold uppercase tracking-wide">Arizona Women&apos;s</p>
+                <p className="text-[#E91E8C] text-sm uppercase tracking-wider">Conference</p>
+              </div>
+            </div>
             <p className="text-white/60 mb-6 max-w-md">
-              The Arizona Women&apos;s Conference brings together ambitious women for a transformative day of
-              inspiration, education, and connection. Join us May 2, 2026 in Phoenix.
+              Arizona&apos;s premier conference for women in business. Join hundreds of ambitious women
+              for a transformative day of inspiration, education, and connection.
             </p>
+            <div className="mb-6 pt-4 border-t border-white/10">
+              <p className="text-white/40 text-xs uppercase tracking-wide mb-2">Title Sponsor</p>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://dtdtnation.com/wp-content/uploads/2022/01/DTDT_logo-1.svg"
+                alt="DO THE DAMN THING"
+                style={{ height: '30px', opacity: 0.7 }}
+              />
+            </div>
             {/* Social Links */}
             <div className="flex space-x-4">
               <a href="https://instagram.com/dotheblankthing" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-[#E91E8C] transition-colors">

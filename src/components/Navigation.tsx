@@ -20,12 +20,15 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://dtdtnation.com/wp-content/uploads/2022/01/DTDT_logo-1.svg"
-              alt="DO THE DAMN THING"
-              style={{ height: '40px' }}
-            />
+            <div className="flex items-center gap-2">
+              <div className="w-10 h-10 rounded-full bg-[#E91E8C] flex items-center justify-center">
+                <span className="text-white font-bold text-lg">AZ</span>
+              </div>
+              <div className="hidden sm:block">
+                <p className="text-white font-bold text-sm uppercase tracking-wide leading-tight">Arizona Women&apos;s</p>
+                <p className="text-[#E91E8C] text-xs uppercase tracking-wider">Conference</p>
+              </div>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

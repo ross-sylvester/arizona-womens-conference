@@ -123,7 +123,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Founder */}
+      {/* Title Sponsor */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -134,25 +134,24 @@ export default function AboutPage() {
               className="rounded-lg shadow-xl"
             />
             <div>
-              <p className="text-sm uppercase tracking-widest text-[#E91E8C] mb-4">Meet the Founder</p>
+              <p className="text-sm uppercase tracking-widest text-[#E91E8C] mb-4">Title Sponsor</p>
               <h2 className="text-3xl font-bold text-[#1a1a1a] uppercase mb-6" style={{ fontFamily: '"Acherus Black", Montserrat, sans-serif' }}>
-                Tiffany Largie
+                DO THE DAMN THING
               </h2>
               <p className="text-[#333] mb-6 leading-relaxed">
-                Tiffany Largie is a serial entrepreneur, international speaker, and the CEO of DO THE DAMN THING.
-                With multiple seven-figure businesses under her belt, Tiffany has become a leading voice in
-                helping women entrepreneurs build successful businesses on their own terms.
+                The Arizona Women&apos;s Conference is proudly sponsored by DO THE DAMN THING,
+                a movement dedicated to helping women entrepreneurs build successful businesses on their own terms.
               </p>
               <p className="text-[#333] mb-8 leading-relaxed">
-                Her no-nonsense approach and genuine passion for seeing women succeed has made her a sought-after
-                speaker and mentor. The Arizona Women&apos;s Conference is her way of bringing together the best
-                minds and biggest hearts for a day of real talk and real results.
+                Founded by Tiffany Largie, a serial entrepreneur with multiple seven-figure businesses,
+                DO THE DAMN THING brings real talk and real results to ambitious women ready to take
+                their businesses to the next level.
               </p>
               <Link
                 href="/speakers"
                 className="inline-block px-8 py-4 bg-[#E91E8C] text-white font-bold text-sm uppercase tracking-wide rounded hover:opacity-90 transition-opacity"
               >
-                View All Speakers
+                View 2026 Speakers
               </Link>
             </div>
           </div>

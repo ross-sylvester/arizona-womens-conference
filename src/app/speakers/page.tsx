@@ -11,34 +11,56 @@ const speakers = [
   {
     name: 'Tiffany Largie',
     title: 'Keynote Speaker',
-    role: 'CEO, DO THE DAMN THING',
+    role: 'Serial Entrepreneur & CEO',
     image: 'https://dtdtnation.com/wp-content/uploads/2022/04/TiffanyL-LA-2018-1450.jpg',
-    bio: 'Serial entrepreneur, international speaker, and CEO of DO THE DAMN THING. Tiffany has built multiple seven-figure businesses and is passionate about helping women entrepreneurs unlock their full potential.',
-    featured: true
+    bio: 'Serial entrepreneur and international speaker who has built multiple seven-figure businesses. Tiffany is passionate about helping women entrepreneurs unlock their full potential and create lasting success.',
+    featured: true,
+    announced: true
   },
   {
-    name: 'Speaker Announcement',
-    title: 'Coming Soon',
+    name: 'To Be Announced',
+    title: 'Keynote Speaker',
     role: 'Industry Leader',
     image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop',
-    bio: 'We\'re curating an incredible lineup of speakers. Stay tuned for announcements on the powerful women who will be sharing their insights.',
-    featured: false
+    bio: 'We\'re curating an incredible lineup of keynote speakers. Stay tuned for announcements on the powerful women who will be sharing their insights.',
+    featured: false,
+    announced: false
   },
   {
-    name: 'Speaker Announcement',
-    title: 'Coming Soon',
-    role: 'Business Expert',
+    name: 'To Be Announced',
+    title: 'Workshop Leader',
+    role: 'Business Strategist',
     image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop',
-    bio: 'More speakers will be announced soon. Follow us on social media to be the first to know when new speakers are added to the lineup.',
-    featured: false
+    bio: 'Our workshop leaders are experts in their fields, ready to deliver actionable strategies you can implement immediately.',
+    featured: false,
+    announced: false
   },
   {
-    name: 'Speaker Announcement',
-    title: 'Coming Soon',
+    name: 'To Be Announced',
+    title: 'Panel Speaker',
     role: 'Entrepreneur',
     image: 'https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=400&h=400&fit=crop',
-    bio: 'Our speaker lineup continues to grow. Each speaker is carefully selected to bring actionable insights and real-world experience.',
-    featured: false
+    bio: 'Join our panel discussions featuring successful women entrepreneurs sharing real stories and hard-won lessons.',
+    featured: false,
+    announced: false
+  },
+  {
+    name: 'To Be Announced',
+    title: 'Breakout Session',
+    role: 'Marketing Expert',
+    image: 'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&h=400&fit=crop',
+    bio: 'Our breakout sessions cover specialized topics to help you level up specific areas of your business.',
+    featured: false,
+    announced: false
+  },
+  {
+    name: 'To Be Announced',
+    title: 'Breakout Session',
+    role: 'Finance Professional',
+    image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=400&fit=crop',
+    bio: 'Each speaker brings unique expertise and real-world experience to share with our community.',
+    featured: false,
+    announced: false
   }
 ]
 
@@ -64,11 +86,11 @@ export default function SpeakersPage() {
         </div>
       </section>
 
-      {/* Featured Speaker */}
+      {/* First Announced Speaker */}
       {featuredSpeaker && (
         <section className="py-20 px-4" style={{ backgroundColor: '#E91E8C' }}>
           <div className="max-w-5xl mx-auto">
-            <p className="text-white/80 text-sm uppercase tracking-widest text-center mb-12">Featured Keynote</p>
+            <p className="text-white/80 text-sm uppercase tracking-widest text-center mb-12">First Announced Speaker</p>
             <div className="flex flex-col md:flex-row items-center gap-12">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -93,12 +115,15 @@ export default function SpeakersPage() {
         </section>
       )}
 
-      {/* Other Speakers */}
+      {/* More Speakers */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-[#1a1a1a] uppercase text-center mb-16" style={{ fontFamily: '"Acherus Black", Montserrat, sans-serif' }}>
-            More Speakers
-          </h2>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-[#1a1a1a] uppercase mb-4" style={{ fontFamily: '"Acherus Black", Montserrat, sans-serif' }}>
+              2026 Speaker Lineup
+            </h2>
+            <p className="text-[#666]">More speakers will be announced leading up to the conference</p>
+          </div>
           <div className="grid md:grid-cols-3 gap-8">
             {otherSpeakers.map((speaker, i) => (
               <div key={i} className="text-center">
@@ -107,13 +132,14 @@ export default function SpeakersPage() {
                   src={speaker.image}
                   alt={speaker.name}
                   className="w-48 h-48 rounded-full object-cover mx-auto mb-6 shadow-lg"
-                  style={{ filter: speaker.name === 'Speaker Announcement' ? 'grayscale(100%)' : 'none' }}
+                  style={{ filter: speaker.name.includes('Announced') ? 'grayscale(100%) opacity(0.5)' : 'none' }}
                 />
+                <p className="text-xs uppercase tracking-wide text-[#E91E8C] mb-2">{speaker.title}</p>
                 <h3 className="text-xl font-bold text-[#1a1a1a] uppercase mb-2" style={{ fontFamily: '"Acherus Bold", Montserrat, sans-serif' }}>
                   {speaker.name}
                 </h3>
-                <p className="text-[#E91E8C] font-medium mb-2">{speaker.role}</p>
-                <p className="text-[#666] text-sm">{speaker.bio}</p>
+                <p className="text-[#666] font-medium mb-2">{speaker.role}</p>
+                <p className="text-[#999] text-sm">{speaker.bio}</p>
               </div>
             ))}
           </div>
