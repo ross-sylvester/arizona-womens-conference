@@ -1,6 +1,10 @@
 import Stripe from 'stripe';
 import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
+import { ConvexHttpClient } from 'convex/browser';
+import { api } from '../../../../convex/_generated/api';
+
+const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 
 const getStripe = () => {
   if (!process.env.STRIPE_SECRET_KEY) {
@@ -47,6 +51,20 @@ export async function POST(request: NextRequest) {
     const customerName = metadata.customer_name;
     const customerEmail = metadata.customer_email || session.customer_email;
     const customerPhone = metadata.customer_phone;
+
+    // Update payment status in Convex
+    try {
+      await convex.mutation(api.attendees.updatePaymentStatus, {
+        stripeSessionId: session.id,
+        paymentStatus: 'completed',
+        stripePaymentId: session.payment_intent as string,
+        amountPaid: session.amount_total || 0,
+      });
+      console.log('Updated attendee in Convex:', session.id);
+    } catch (convexError) {
+      console.error('Convex update error:', convexError);
+      // Continue with emails even if Convex fails
+    }
 
     const isVip = ticketType === 'awc-vip';
     const ticketDetails = {

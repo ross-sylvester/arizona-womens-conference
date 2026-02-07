@@ -1,4 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { ConvexHttpClient } from 'convex/browser';
+import { api } from '../../../../convex/_generated/api';
+
+const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 
 export async function POST(request: NextRequest) {
   try {
@@ -87,6 +91,20 @@ export async function POST(request: NextRequest) {
         { error: 'Failed to create checkout session', details: data.error?.message || 'Unknown error' },
         { status: 500 }
       );
+    }
+
+    // Save attendee to Convex database
+    try {
+      await convex.mutation(api.attendees.create, {
+        name,
+        email,
+        phone: phone || undefined,
+        ticketType: ticketType === 'awc-vip' ? 'vip' : 'general',
+        stripeSessionId: data.id,
+      });
+    } catch (convexError) {
+      console.error('Convex error (non-blocking):', convexError);
+      // Don't fail the checkout if Convex fails - Stripe webhook will also save
     }
 
     return NextResponse.json({
