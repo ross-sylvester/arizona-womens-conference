@@ -279,16 +279,18 @@ export default function ArizonaWomensConferencePage() {
           <div className="flex flex-wrap justify-center items-center gap-16">
             <div className="text-center">
               <p className="text-xs uppercase tracking-wide text-[#999] mb-3">Title Sponsor</p>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="https://dtdtnation.com/wp-content/uploads/2022/01/DTDT_logo-1.svg"
-                alt="DO THE DAMN THING"
-                style={{ height: '50px' }}
-              />
+              <a href="https://dotheblankthing.com" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-80 transition-opacity inline-block">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://dtdtnation.com/wp-content/uploads/2022/01/DTDT_logo-1.svg"
+                  alt="DO THE DAMN THING"
+                  style={{ height: '50px' }}
+                />
+              </a>
             </div>
             <div className="text-center">
               <p className="text-xs uppercase tracking-wide text-[#999] mb-3">Platinum Sponsor</p>
-              <a href="https://speedrun.adrata.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+              <a href="https://speedrun.adrata.com" target="_blank" rel="noopener noreferrer" className="cursor-pointer inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity">
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7 17L17 7M17 7H9M17 7V15" stroke="#2563eb" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
