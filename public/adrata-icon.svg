@@ -1,6 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <!-- White squircle background -->
-  <rect x="1" y="1" width="30" height="30" rx="8" ry="8" fill="#ffffff"/>
-  <!-- Blue arrow -->
-  <path d="M10 22L22 10M22 10H14M22 10V18" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- Diagonal arrow matching speedrun.adrata.com -->
+  <path d="M7 17L17 7M17 7H9M17 7V15" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

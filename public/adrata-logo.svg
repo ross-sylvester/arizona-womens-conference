@@ -1,19 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 85 24" fill="none">
-  <!-- Blue diagonal arrow -->
-  <path d="M4 18L14 8M14 8H8M14 8V14" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- Adrata text as paths -->
-  <g fill="#1a1a1a">
-    <!-- A -->
-    <path d="M24 18L27.5 6h2l3.5 12h-2l-.8-3h-3.4l-.8 3h-2zm3.2-5h2.6l-1.3-5-1.3 5z"/>
-    <!-- d -->
-    <path d="M37 6v12h-1.8v-1c-.5.8-1.3 1.2-2.2 1.2-1.8 0-3-1.5-3-3.7s1.2-3.7 3-3.7c.9 0 1.7.4 2.2 1.2V6H37zm-3.5 10.5c1.1 0 1.8-.9 1.8-2.2s-.7-2.2-1.8-2.2-1.8.9-1.8 2.2.7 2.2 1.8 2.2z"/>
-    <!-- r -->
-    <path d="M39 18v-7.2h1.8v1.3c.4-.9 1.1-1.4 2.2-1.4v2h-.5c-1.2 0-1.7.5-1.7 1.8V18H39z"/>
-    <!-- a -->
-    <path d="M48.5 18v-1c-.5.8-1.2 1.2-2.3 1.2-1.5 0-2.5-.9-2.5-2.2 0-1.4 1-2.2 2.8-2.2h2v-.3c0-.9-.5-1.4-1.5-1.4-.8 0-1.3.4-1.4 1h-1.9c.2-1.6 1.5-2.5 3.4-2.5 2 0 3.2 1 3.2 2.8V18h-1.8zm-1.7-1.3c1 0 1.7-.7 1.7-1.6v-.4h-1.8c-.8 0-1.2.4-1.2 1s.5 1 1.3 1z"/>
-    <!-- t -->
-    <path d="M51.5 18v-5.8h-1.2v-1.4h1.2V8.5h1.8v2.3h1.5v1.4h-1.5V18h-1.8z"/>
-    <!-- a -->
-    <path d="M60.5 18v-1c-.5.8-1.2 1.2-2.3 1.2-1.5 0-2.5-.9-2.5-2.2 0-1.4 1-2.2 2.8-2.2h2v-.3c0-.9-.5-1.4-1.5-1.4-.8 0-1.3.4-1.4 1h-1.9c.2-1.6 1.5-2.5 3.4-2.5 2 0 3.2 1 3.2 2.8V18h-1.8zm-1.7-1.3c1 0 1.7-.7 1.7-1.6v-.4h-1.8c-.8 0-1.2.4-1.2 1s.5 1 1.3 1z"/>
-  </g>
+  <!-- Diagonal arrow -->
+  <path d="M4 18L14 8M14 8H8M14 8V14" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Adrata text -->
+  <text x="22" y="17" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="500" fill="#1a1a1a">Adrata</text>
 </svg>

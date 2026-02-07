@@ -38,14 +38,14 @@ export default function Footer() {
                   href="https://speedrun.adrata.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1 cursor-pointer hover:opacity-100 transition-opacity"
+                  className="flex items-center gap-1.5 cursor-pointer hover:opacity-100 transition-opacity"
                   style={{ opacity: 0.7 }}
                   onClick={() => window.open('https://speedrun.adrata.com', '_blank')}
                 >
                   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 17L17 7M17 7H9M17 7V15" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M7 17L17 7M17 7H9M17 7V15" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
-                  <span className="text-white text-sm">Adrata</span>
+                  <span className="text-white text-sm font-medium">Adrata</span>
                 </a>
               </div>
             </div>
