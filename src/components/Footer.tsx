@@ -19,19 +19,33 @@ export default function Footer() {
             <div className="pt-4 border-t border-white/10">
               <p className="text-white/40 text-xs uppercase tracking-wide mb-3">Sponsors</p>
               <div className="flex items-center gap-6">
-                <a href="https://dotheblankthing.com" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-100 transition-opacity">
+                <a
+                  href="https://dotheblankthing.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block cursor-pointer hover:opacity-100 transition-opacity"
+                  style={{ opacity: 0.7 }}
+                  onClick={() => window.open('https://dotheblankthing.com', '_blank')}
+                >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src="https://dtdtnation.com/wp-content/uploads/2022/01/DTDT_logo-1.svg"
                     alt="DO THE DAMN THING"
-                    style={{ height: '24px', opacity: 0.7 }}
+                    style={{ height: '24px' }}
                   />
                 </a>
-                <a href="https://speedrun.adrata.com" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-100 transition-opacity flex items-center gap-1" style={{ opacity: 0.7 }}>
-                  <svg className="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <a
+                  href="https://speedrun.adrata.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 cursor-pointer hover:opacity-100 transition-opacity"
+                  style={{ opacity: 0.7 }}
+                  onClick={() => window.open('https://speedrun.adrata.com', '_blank')}
+                >
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 17L17 7M17 7H9M17 7V15" stroke="#3b82f6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
-                  <span className="text-white text-sm font-normal">Adrata</span>
+                  <span className="text-white text-sm">Adrata</span>
                 </a>
               </div>
             </div>

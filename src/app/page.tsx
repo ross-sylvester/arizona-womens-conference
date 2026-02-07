@@ -279,7 +279,13 @@ export default function ArizonaWomensConferencePage() {
           <div className="flex flex-col items-center gap-10">
             <div className="text-center">
               <p className="text-xs uppercase tracking-wide text-[#999] mb-3">Title Sponsor</p>
-              <a href="https://dotheblankthing.com" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-80 transition-opacity inline-block">
+              <a
+                href="https://dotheblankthing.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block cursor-pointer hover:opacity-80 transition-opacity"
+                onClick={() => window.open('https://dotheblankthing.com', '_blank')}
+              >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="https://dtdtnation.com/wp-content/uploads/2022/01/DTDT_logo-1.svg"
@@ -290,11 +296,17 @@ export default function ArizonaWomensConferencePage() {
             </div>
             <div className="text-center">
               <p className="text-xs uppercase tracking-wide text-[#999] mb-3">Platinum Sponsor</p>
-              <a href="https://speedrun.adrata.com" target="_blank" rel="noopener noreferrer" className="cursor-pointer inline-flex items-center gap-1 hover:opacity-80 transition-opacity">
-                <svg className="w-5 h-5 text-blue-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <a
+                href="https://speedrun.adrata.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 cursor-pointer hover:opacity-80 transition-opacity"
+                onClick={() => window.open('https://speedrun.adrata.com', '_blank')}
+              >
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 17L17 7M17 7H9M17 7V15" stroke="#2563eb" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-                <span className="text-[#1a1a1a] text-lg font-normal">Adrata</span>
+                <span className="text-[#1a1a1a] text-lg">Adrata</span>
               </a>
             </div>
           </div>
