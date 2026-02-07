@@ -115,9 +115,9 @@ export default function SchedulePage() {
       </section>
 
       {/* Legend */}
-      <section className="py-8 px-4 bg-white">
+      <section className="py-6 px-4 bg-white border-b border-gray-100">
         <div className="max-w-4xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-3">
             {[
               { type: 'keynote', label: 'Keynote' },
               { type: 'panel', label: 'Panel' },
@@ -126,9 +126,20 @@ export default function SchedulePage() {
               { type: 'break', label: 'Meal/Break' },
               { type: 'vip', label: 'VIP Only' }
             ].map((item) => (
-              <div key={item.type} className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full" style={{ backgroundColor: typeColors[item.type] }} />
-                <span className="text-sm text-[#666]">{item.label}</span>
+              <div
+                key={item.type}
+                className="flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium"
+                style={{
+                  backgroundColor: `${typeColors[item.type]}15`,
+                  color: typeColors[item.type],
+                  border: `1px solid ${typeColors[item.type]}30`
+                }}
+              >
+                <div
+                  className="w-2 h-2 rounded-full"
+                  style={{ backgroundColor: typeColors[item.type] }}
+                />
+                {item.label}
               </div>
             ))}
           </div>

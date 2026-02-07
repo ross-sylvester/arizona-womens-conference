@@ -2,10 +2,12 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
 
   const navLinks = [
     { href: '/', label: 'Home' },
@@ -15,6 +17,13 @@ export default function Navigation() {
     { href: '/venue', label: 'Venue' },
     { href: '/faq', label: 'FAQ' },
   ]
+
+  const isActive = (href: string) => {
+    if (href === '/') {
+      return pathname === '/'
+    }
+    return pathname.startsWith(href)
+  }
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50" style={{ backgroundColor: '#101010', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
@@ -34,7 +43,11 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-white/80 hover:text-[#E91E8C] transition-colors text-sm uppercase tracking-wide font-medium"
+                className={`transition-colors text-sm uppercase tracking-wide font-medium ${
+                  isActive(link.href)
+                    ? 'text-[#E91E8C]'
+                    : 'text-white/80 hover:text-[#E91E8C]'
+                }`}
               >
                 {link.label}
               </Link>
@@ -69,7 +82,11 @@ export default function Navigation() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-3 text-white/80 hover:text-[#E91E8C] transition-colors text-sm uppercase tracking-wide"
+                className={`block py-3 transition-colors text-sm uppercase tracking-wide ${
+                  isActive(link.href)
+                    ? 'text-[#E91E8C] font-bold'
+                    : 'text-white/80 hover:text-[#E91E8C]'
+                }`}
               >
                 {link.label}
               </Link>
