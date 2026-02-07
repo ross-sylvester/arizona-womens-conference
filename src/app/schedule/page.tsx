@@ -115,9 +115,9 @@ export default function SchedulePage() {
       </section>
 
       {/* Legend */}
-      <section className="py-6 px-4 bg-white border-b border-gray-100">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-3">
+      <section className="pt-8 pb-4 px-4 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-2">
             {[
               { type: 'keynote', label: 'Keynote' },
               { type: 'panel', label: 'Panel' },
@@ -147,20 +147,20 @@ export default function SchedulePage() {
       </section>
 
       {/* Schedule */}
-      <section className="py-20 px-4 bg-white">
+      <section className="pt-6 pb-20 px-4 bg-white">
         <div className="max-w-3xl mx-auto">
-          <div className="space-y-6">
+          <div className="space-y-4">
             {schedule.map((item, i) => (
               <div
                 key={i}
-                className="flex gap-6 p-6 rounded-lg transition-all hover:shadow-lg"
+                className="flex gap-4 p-5 rounded-lg transition-all hover:shadow-md"
                 style={{
-                  backgroundColor: item.type === 'vip' ? 'rgba(233,30,140,0.1)' : '#f9f9f9',
+                  backgroundColor: item.type === 'vip' ? 'rgba(233,30,140,0.08)' : '#f9f9f9',
                   borderLeft: `4px solid ${typeColors[item.type]}`
                 }}
               >
-                <div className="flex-shrink-0 w-24">
-                  <span className="font-bold text-[#1a1a1a]">{item.time}</span>
+                <div className="flex-shrink-0 w-20">
+                  <span className="font-bold text-[#1a1a1a] text-sm">{item.time}</span>
                 </div>
                 <div className="flex-1">
                   <div className="flex items-start justify-between gap-4">
