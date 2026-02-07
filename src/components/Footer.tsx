@@ -27,12 +27,11 @@ export default function Footer() {
                     style={{ height: '24px', opacity: 0.7 }}
                   />
                 </a>
-                <a href="https://speedrun.adrata.com" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-100 transition-opacity flex items-center gap-1.5" style={{ opacity: 0.7 }}>
-                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="24" height="24" rx="6" fill="#2563eb"/>
-                    <path d="M8 16L16 8M16 8H10M16 8V14" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <a href="https://speedrun.adrata.com" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-100 transition-opacity flex items-center gap-1" style={{ opacity: 0.7 }}>
+                  <svg className="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
-                  <span className="text-white/90 text-sm font-normal">Adrata</span>
+                  <span className="text-white text-sm font-normal">Adrata</span>
                 </a>
               </div>
             </div>
